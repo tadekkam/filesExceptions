@@ -18,4 +18,11 @@ class PeselValidatorTest {
                 () -> PeselValidator.peselValidate("123"));
         assertEquals("Numer PESEL powinien mieć dokładnie 11 znaków.", exception.getMessage());
     }
+
+    @Test
+    public void testValidatePeselWrongType() {
+        PeselValidator.WrongTypeOfDataException exception = assertThrows(PeselValidator.WrongTypeOfDataException.class,
+                () -> PeselValidator.peselValidate("1234567891A"));
+        assertEquals("Numer PESEL powinien być typu String.", exception.getMessage());
+    }
 }

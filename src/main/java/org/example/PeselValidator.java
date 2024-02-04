@@ -16,7 +16,7 @@ public class PeselValidator {
 
     public static boolean peselValidate(String pesel) throws WrongTypeOfDataException, IllegalLengthException {
 
-        if (!(pesel instanceof String)) {
+        if (!pesel.matches("\\d+")) {
             throw new WrongTypeOfDataException("Numer PESEL powinien być typu String.");
 
         }
