@@ -3,13 +3,22 @@ package org.example;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+
 public class FileExample {
+    public static void filePrintReverse(String filePath) throws Exception {
 
-    public static void filePrint (String filePath) throws Exception {
+        int lineNumber = 0;
+        int lineCount = (int) Files.lines(Path.of(filePath)).count();
 
-        String text = Files.readString(Path.of(filePath));
+        String[] lines = new String[lineCount];
 
-        System.out.println(text);
+        for (String line : Files.readAllLines(Path.of(filePath))) {
+            lines[lineNumber++] = line;
+        }
+
+        for (int i = lines.length -1; i >= 0; i--) {
+            System.out.println(lines[i]);
+        }
+
     }
-
 }
