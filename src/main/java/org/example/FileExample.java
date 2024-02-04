@@ -4,6 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 
+
 public class FileExample {
     public static void filePrint(String filePath) throws Exception {
 
@@ -17,4 +18,3 @@ public class FileExample {
 
     }
 }
-
