@@ -5,11 +5,11 @@ import java.nio.file.Path;
 
 public class FileExample {
 
-    public static void filePrint (String filePath) throws Exception {
+    public static void fileNumberOfCharacters (String filePath) throws Exception {
 
         String text = Files.readString(Path.of(filePath));
 
-        System.out.println(text);
+        System.out.println(text.length());
     }
 
 }
