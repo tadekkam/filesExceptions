@@ -1,12 +1,16 @@
 package org.example;
-
 public class Main {
     public static void main(String[] args) {
 
-        Validator validator = new Validator();
-        int[] values = {9, 0, 15, 7, 18, -4};
+        String filePath = "D:\\data.txt";
+        String textFind = "JAVA";
 
-        validator.validate(values);
+        try {
+            boolean isTextFind = FileExample.isTextInFile(filePath, textFind);
+            System.out.println(isTextFind);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
 
     }

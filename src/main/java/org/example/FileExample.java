@@ -3,13 +3,20 @@ package org.example;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+
 public class FileExample {
 
-    public static void filePrint (String filePath) throws Exception {
+    public static boolean isTextInFile(String filePath, String textFind) throws Exception {
 
         String text = Files.readString(Path.of(filePath));
+        text = text.toUpperCase();
+        textFind = textFind.toUpperCase();
 
-        System.out.println(text);
+        if (text.contains(textFind)) {
+            return true;
+        }
+        return false;
+
     }
 
 }
