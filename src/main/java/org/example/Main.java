@@ -7,7 +7,7 @@ public class Main {
         String textFind = "JAVA";
 
         try {
-            boolean isTextFind = FileExample.isTextFindFile(filePath, textFind);
+            boolean isTextFind = FileExample.isTextInFile(filePath, textFind);
             System.out.println(isTextFind);
         } catch (Exception e) {
             throw new RuntimeException(e);

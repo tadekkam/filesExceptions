@@ -6,7 +6,7 @@ import java.nio.file.Path;
 
 public class FileExample {
 
-    public static boolean isTextFindFile (String filePath, String textFind) throws Exception {
+    public static boolean isTextInFile(String filePath, String textFind) throws Exception {
 
         String text = Files.readString(Path.of(filePath));
         text = text.toUpperCase();
