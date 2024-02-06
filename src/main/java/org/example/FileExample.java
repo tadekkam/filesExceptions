@@ -3,13 +3,16 @@ package org.example;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+
 public class FileExample {
 
-    public static void filePrint (String filePath) throws Exception {
+    public static void changeToUpperCase(String filePath, String fileOutputPath) throws Exception {
 
         String text = Files.readString(Path.of(filePath));
+        text = text.toUpperCase();
 
-        System.out.println(text);
+        Files.writeString(Path.of(fileOutputPath), text);
+
     }
 
 }
