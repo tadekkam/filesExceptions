@@ -1,3 +1,4 @@
+package org.example;
 public class Main {
     public static void main(String[] args) {
 
@@ -5,7 +6,7 @@ public class Main {
         String fileOutputPath = "D:\\output.txt";
 
         try {
-            FileExample.fileRewrite(filePath, fileOutputPath);
+            FileExample.changeToUpperCase(filePath, fileOutputPath);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
